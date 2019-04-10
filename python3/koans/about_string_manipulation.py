@@ -32,16 +32,16 @@ class AboutStringManipulation(Koan):
 
     def test_you_can_get_a_single_character_from_a_string(self):
         string = "Bacon, lettuce and tomato"
-        self.assertEqual(__, string[1])
+        self.assertEqual("a", string[1])
 
     def test_single_characters_can_be_represented_by_integers(self):
-        self.assertEqual(__, ord('a'))
-        self.assertEqual(__, ord('b') == (ord('a') + 1))
+        self.assertEqual(97, ord('a'))
+        self.assertEqual(True, ord('b') == (ord('a') + 1))
 
     def test_strings_can_be_split(self):
         string = "Sausage Egg Cheese"
         words = string.split()
-        self.assertListEqual([__, __, __], words)
+        self.assertListEqual(["Sausage", "Egg", "Cheese"], words)
 
     def test_strings_can_be_split_with_different_patterns(self):
         import re #import python regular expression library
@@ -51,7 +51,7 @@ class AboutStringManipulation(Koan):
 
         words = pattern.split(string)
 
-        self.assertListEqual([__, __, __, __], words)
+        self.assertListEqual(["the", "rain", "in", "spain"], words)
 
         # Pattern is a Python regular expression pattern which matches ',' or ';'
 
